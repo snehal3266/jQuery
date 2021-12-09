@@ -17,7 +17,7 @@
     <p>Good Morning</p>
     <p>Hello Everyone</p>
 
-    <select  id="selectshow" onchange="slectshow()">
+    <select id="selectshow" onchange="slectshow()">
         <option value="Gm"> Gm </option>
         <option value="Good morning"> Good morning</option>
         <option value="Very Good morning"> Very Good Morning </option>
@@ -43,17 +43,21 @@
 
             });
 
-            $("img").mouseenter(function(){
-                $(this).height($(this).height()+20);
+            $("img").mouseenter(function () {
+                $(this).height($(this).height() + 20);
             });
 
-            $("img").mouseleave(function(){
-                $(this).height($(this).height()-20);
+            $("img").mouseleave(function () {
+                $(this).height($(this).height() - 20);
+            });
+
+            $("img").hover(function(){
+                alert("This is a Good Morning Image!");
             });
 
         });
 
-        function slectshow(){
+        function slectshow() {
             alert($("#selectshow").val());
         }
     </script>
