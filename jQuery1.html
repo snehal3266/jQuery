@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> </script>
+</head>
+
+<body>
+    <img src="images/img1.jpg" id="img1" style="height: 100px; width: auto;" alt="img1">
+    <img src="images/img2.jpg" id="img2" style="height: 100px; width: auto;" alt="img2">
+    <p> welcome To The Ride!</p>
+    <p>Good Morning</p>
+    <p>Hello Everyone</p>
+
+    <select  id="selectshow" onchange="slectshow()">
+        <option value="Gm"> Gm </option>
+        <option value="Good morning"> Good morning</option>
+        <option value="Very Good morning"> Very Good Morning </option>
+    </select>
+
+    <button id="hide"> Hide Paragraphs</button>
+    <button id="show">show Paragraphs</button>
+    <button id="hideimg"> Hide Image</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+
+            $("#show").click(function () {
+                $("p").show();
+            });
+
+            $("#hideimg").click(function () {
+                $("#img1").height(300);
+                $("#img2").width(200);
+
+            });
+
+            $("img").mouseenter(function(){
+                $(this).height($(this).height()+20);
+            });
+
+            $("img").mouseleave(function(){
+                $(this).height($(this).height()-20);
+            });
+
+        });
+
+        function slectshow(){
+            alert($("#selectshow").val());
+        }
+    </script>
+
+</body>
+
+</html>
