@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <img src="images/logo.png" alt="logo" style="height: 200px; position: relative;">
+    <button>Click Me</button>
+    <label>This is iGAP Technology!</label>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+               // $("img").css("border", "solid blue 1px").slideUp(2000).slideDown(2000);//This is known as jQuery Chaining
+                //  $("img").animate({left:'250px',height:'100px',borderradius:'50px',top:'200px',opacity:'0.5',width:'80px'},5000);
+                // $("img").animate({left:'250px',height:'100px',borderradius:'50px',top:'200px',opacity:'0.5',width:'+=80px'},5000);
+                // $("img").animate({left:'250px',height:'toggle',borderradius:'50px',top:'200px',opacity:'0.5',width:'80px'},5000);
+
+               // $("img").toggle(1000, function () { $("label").stop(); });
+               $("img").toggle(1000, function () { alert("This is known as Toggle");});
+                //alert("This is known as Toggle");
+
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
