@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="mydiv">jQuery Remove elements</div> <br>
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button> 
+
+    <script>
+        function add()
+        {
+            let h1 = document.createElement("h1");
+            h1.innerText = "This is tutorial of jQuery";
+            h1.id = "myh1";
+            $("#mydiv").append(h1);
+        }
+
+        function remove()
+        {
+            $("#myh1").remove();
+        }
+
+        function addclass()
+        {
+            $("#myh1").addClass("myclass");
+        }
+
+        function removeclass()
+        {
+            $("#myh1").removeClass("myclass");
+        }
+    </script>
+    
+</body>
+</html>
