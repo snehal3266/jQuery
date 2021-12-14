@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="mydiv1"><b>Welcome to Programming</b></div>
+    <div id="mydiv2"></div>
+    <button onclick="refresh()">Refresh Content</button>
+
+    <input type="number" id="no1" />
+    <input type="number" id="no2" />
+    <button onclick="add()">Add</button>
+    <div id="result"></div>
+
+    <a id="mylink" target="_BLANK" href="https://google.com">Click Me</a>
+    <button onclick="change()">Change HRef</button>
+    <button onclick="tellme()">Tell Me</button>
+    
+
+    <script>
+        // $(document).ready(function(){
+        //     $("button").click(function()
+        //     {
+        //         $("#mydiv2").html("Hello");
+        //     });
+        // });
+        function refresh()
+        {
+            //document.getElementById("mydiv2").innerHTML = document.getElementById("mydiv1").innerText;
+            //$("#mydiv2").html($("#mydiv1").html());
+            
+        }
+
+        function add()
+        {
+            let no1 = Number($("#no1").val());
+            let no2 = Number($("#no2").val());
+            let result = no1 + no2;
+            $("#result").html("Addition is : <b>" + result + "</b>");
+        }
+
+        function change()
+        {
+            // document.getElementById("mylink").href = "https://igaptechnologies.com";
+            // document.getElementById("mylink").style.color = "red";
+            $("#mylink").attr("href", "https://igaptechnologies.com");
+            $("#mylink").css({color:"red"});
+        }
+
+        function tellme()
+        {
+            alert($("#mylink").attr("href"));
+        }
+    </script>
+</body>
+</html>

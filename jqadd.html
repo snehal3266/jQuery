@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="mydiv">
+        <h1 id="myh1">This is jquery</h1>
+    </div>
+    <button onclick="add()">Add Element</button>
+    <button onclick="addafter()">Add After</button>
+
+    <script>
+        function add()
+        {
+            $("#mydiv").append("<h2>This is awesome</h2>");
+            $("#mydiv").prepend("<h2>Welcome</h2>");
+            //$("#mydiv").after($("#myh1"), "<h2>I am in between</h2>");
+        }
+        function addafter()
+        {
+            $("#myh1").append("<h2>I am in between</h2>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+   <div id="div1">jQuery DOM Manipulation</div>
+   <div id="div2"></div>
+   <button onclick="dom()">Click Me!</button>
+
+   <input type="number" id="no1">
+   <input type="number" id="no2">
+   <button onclick="add()">Add</button>
+   <div id="result"></div>
+
+   <script>
+      function dom(){
+        //  $("#mydiv").text("hello");
+        //$("#div1").html("hello");
+        $("#div2").html($("#div1").html());
+      }
+      function add(){
+          let no1 = Number($("#no1").val());
+          let no2 = Number($("#no2").val());
+          let result=no1 + no2;
+          $("#result").html("Addition is: <b> "+ result +"</b>") ;
+
+      }
+   </script>
+    
+</body>
+</html>
