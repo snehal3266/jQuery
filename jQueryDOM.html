@@ -9,13 +9,17 @@
 </head>
 <body>
    <div id="div1">jQuery DOM Manipulation</div>
-   <div id="div2"></div>
-   <button onclick="dom()">Click Me!</button>
+   <div id="div2"></div> <br> <br>
+   <button onclick="dom()">Click Me!</button> <br> <br>
 
    <input type="number" id="no1">
-   <input type="number" id="no2">
+   <input type="number" id="no2"> <br> <br>
    <button onclick="add()">Add</button>
-   <div id="result"></div>
+   <div id="result"></div> <br> <br>
+
+   <a id="mylink" target="_BLANK" href="https://google.com">Click Me</a>
+   <button onclick="change()">Change Href</button>
+   <button onclick="changeattr()">Change Attribute</button>
 
    <script>
       function dom(){
@@ -30,6 +34,17 @@
           $("#result").html("Addition is: <b> "+ result +"</b>") ;
 
       }
+
+      function change(){
+         
+          $("#mylink").attr("href" ,"https://www.w3schools.com/jquERy/default.asp");
+          $("#mylink").css({color: "blue"});
+      }
+
+      function changeattr()
+        {
+            alert($("#mylink").attr("href"));
+        }
    </script>
     
 </body>
