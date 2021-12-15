@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="mydiv">
+        <ul id="myul">
+            <li id="myli">
+                <span id="myspan">
+                    Welcome to the iGAP Technology!!
+                </span>
+        
+
+            </li>
+
+        </ul>
+        <button onclick="mybtn()"> Click Me!</button>
+
+    </div>
+    <script>
+            function mybtn(){
+    
+                alert($("#myli").html("This is the Child of ul tag or grandchild of div tag"),$("#myul").html("This is the parent of li tag or child of div tag"),$("#mydiv").html("This is ancestor of whole DOM Tree & Parent of the ul tag"));
+            }
+
+ 
+    </script>
+    
+</body>
+</html>
