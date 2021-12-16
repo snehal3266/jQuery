@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="mydiv"> </div>
+    <button onclick="posts()">Posts</button>
+    <button onclick="comments()">Comments</button>
+    <button onclick="albums()">Albums</button>
+    <button onclick="photos()">Photos</button>
+    <button onclick="todos()">Todos</button>
+    <button onclick="users()">Users</button>
+    <br>
+    <script>
+        function posts() {
+            $.post("https://jsonplaceholder.typicode.com/posts", function (data,status,dataType) {
+                console.log(status);
+                let str = "<table border='1'>";
+                for (let i = 0; i < data.length; i++) {
+                    str += "<tr>";
+                    str += "<td>" + (i + 1) + "</td>";
+                    str += "<td>" + data[i].title + "</td>";
+                    str += "<td>" + data[i].body + "</td>";
+                    str += "</tr>";
+                }
+                str += "</table>";
+                $("#mydiv").html(str);
+            });
+        }
+
+        function comments() {
+            $.post("https://jsonplaceholder.typicode.com/comments", function (data,status,dataType) {
+                console.log(data);
+                let str = "<table border='1'>";
+                for (let i = 0; i < data.length; i++) {
+                    str += "<tr>";
+                    str += "<td>" + (i + 1) + "</td>";
+                    str += "<td>" + data[i].name + "</td>";
+                    str += "<td>" + data[i].email + "</td>";
+                    str += "<td>" + data[i].body + "</td>";
+                    str += "</tr>";
+                }
+                str += "</table>";
+                $("#mydiv").html(str);
+            });
+
+        }
+
+        function albums() {
+            $.post("https://jsonplaceholder.typicode.com/albums", function (data,status,dataType) {
+                console.log(data);
+                let str = "<table border='1'>";
+                for (let i = 0; i < data.length; i++) {
+                    str += "<tr>";
+                    str += "<td>" + (i + 1) + "</td>";
+                    str += "<td>" + data[i].title + "</td>";
+                    str += "</tr>";
+                }
+                str += "</table>";
+                $("#mydiv").html(str);
+            });
+        }
+
+        function photos() {
+            $.post("https://jsonplaceholder.typicode.com/photos", function (data,status,dataType) {
+                console.log(data);
+                let str = "<table border='1'>";
+                for (let i = 0; i < data.length; i++) {
+                    str += "<tr>";
+                    str += "<td>" + (i + 1) + "</td>";
+                    str += "<td>" + data[i].title + "</td>";
+                    str += "<td>" + data[i].url + "</td>";
+                    str += "<td>" + data[i].thumbnailurl + "</td>";
+                    str += "</tr>";
+                }
+                str += "</table>";
+                $("#mydiv").html(str);
+            });
+        }
+
+        function todos() {
+            $.post("https://jsonplaceholder.typicode.com/todos", function (data,status,dataType) {
+                console.log(data);
+                let str = "<table border='1'>";
+                for (let i = 0; i < data.length; i++) {
+                    str += "<tr>";
+                    str += "<td>" + (i + 1) + "</td>";
+                    str += "<td>" + data[i].title + "</td>";
+                    str += "<td>" + data[i].completed + "</td>";
+                    str += "</tr>";
+                }
+                str += "</table>";
+                $("#mydiv").html(str);
+            });
+        }
+
+        function users() {
+            $.post("https://jsonplaceholder.typicode.com/users", function (data,status,dataType) {
+                console.log(data);
+                let str = "<table border='1'>";
+                for (let i = 0; i < data.length; i++) {
+                    str += "<tr>";
+                    str += "<td>" + (i + 1) + "</td>";
+                    str += "<td>" + data[i].name + "</td>";
+                    str += "<td>" + data[i].username + "</td>";
+                    str += "<td>" + data[i].address.street + "</td>";
+                    str += "<td>" + data[i].address.suite + "</td>";
+                    str += "<td>" + data[i].address.city + "</td>";
+                    str += "<td>" + data[i].address.zipcode + "</td>";
+                    str += "<td>" + data[i].address.geo.lat + "</td>";
+                    str += "<td>" + data[i].address.geo.lng + "</td>";
+                    str += "<td>" + data[i].phone + "</td>";
+                    str += "<td>" + data[i].website + "</td>";
+                    str += "<td>" + data[i].company.name + "</td>";
+                    str += "<td>" + data[i].company.catchPhrase + "</td>";
+                    str += "<td>" + data[i].company.bs + "</td>";
+                    str += "</tr>";
+                }
+                str += "</table>";
+                $("#mydiv").html(str);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
