@@ -10,18 +10,19 @@
 </head>
 
 <body>
-    <div id="mydiv"> </div>
+  
     <button onclick="posts()">Posts</button>
     <button onclick="comments()">Comments</button>
     <button onclick="albums()">Albums</button>
     <button onclick="photos()">Photos</button>
     <button onclick="todos()">Todos</button>
     <button onclick="users()">Users</button>
+    <div id="mydiv"> </div>
     <br>
     <script>
         function posts() {
             $.post("https://jsonplaceholder.typicode.com/posts", function (data,status,dataType) {
-                console.log(status);
+                console.log(dataType);
                 let str = "<table border='1'>";
                 for (let i = 0; i < data.length; i++) {
                     str += "<tr>";
